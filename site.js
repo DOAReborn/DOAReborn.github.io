@@ -22,6 +22,44 @@
     });
   }
 
+  var choix = document.getElementById("choix");
+  if (choix) {
+    choix.querySelectorAll("label").forEach(function (l) {
+      if (l.hasAttribute("data-dispo")) return;
+      l.classList.add("bientot");
+      l.querySelector("input").checked = false;
+      l.querySelector("input").disabled = true;
+    });
+    var bouton = choix.querySelector("button");
+    var etat = function () {
+      bouton.disabled = !choix.querySelector("input:checked");
+    };
+    choix.addEventListener("change", function (e) {
+      etat();
+      if (e.target.checked) {
+        bouton.classList.remove("flash");
+        void bouton.offsetWidth;
+        bouton.classList.add("flash");
+      }
+    });
+    etat();
+    choix.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var n = 0;
+      choix.querySelectorAll("label").forEach(function (l) {
+        if (!l.querySelector("input").checked) return;
+        var z = l.getAttribute("data-zip").split("/");
+        var url = "https://github.com/" + z[0] + "/" + z[1] + "/releases/latest/download/" + z[2];
+        setTimeout(function () {
+          var f = document.createElement("iframe");
+          f.hidden = true;
+          f.src = url;
+          document.body.appendChild(f);
+        }, 900 * n++);
+      });
+    });
+  }
+
   document.querySelectorAll("a.carte").forEach(function (c) {
     c.addEventListener("mousemove", function (e) {
       var r = c.getBoundingClientRect();
