@@ -57,8 +57,8 @@
     <a class="carte" href="/DOA5Installer/">
       <span class="etat dispo"><span class="en">Available</span><span class="fr">Disponible</span></span>
       <b>DOA5<span>Installer</span></b>
-      <p class="en">Installs, updates and removes the mods, and your own PS4 stages.</p>
-      <p class="fr">Installe, met à jour et retire les mods, et vos propres stages PS4.</p>
+      <p class="en">Installs, updates and removes the mods.</p>
+      <p class="fr">Installe, met à jour et retire les mods.</p>
       <i class="fleche">→</i>
     </a>
     <a class="carte" href="/DOA5Extra/">
@@ -71,20 +71,37 @@
   </div>
 
   <h2 id="telecharger"><span class="en">Download</span><span class="fr">Télécharger</span></h2>
-  <form class="choix" id="choix">
-    <div class="carte boite">
-      <p class="titre-pack"><b class="mot">DOA5 <span>Revolution</span></b><em class="en">The full package.</em><em class="fr">Le pack complet.</em></p>
-      <label data-zip="DOAReborn/DOA5Installer/DOA5Installer.zip" data-dispo><input type="checkbox" checked>
-        <b>DOA5<span>Installer</span></b></label>
-      <label data-zip="DOAReborn/DOA5Tools/DOA5Tools.zip" data-dispo><input type="checkbox" checked>
-        <b>DOA5<span>Tools</span></b></label>
-      <label data-zip="DOAReborn/DOA5Rollback/DOA5Rollback.zip" data-dispo><input type="checkbox" checked>
-        <b>DOA5<span>Rollback</span></b></label>
-      <label data-zip="DOAReborn/DOA5Extra/DOA5Extra.zip" data-dispo><input type="checkbox" checked>
-        <b>DOA5<span>Extra</span></b></label>
-    </div>
-    <button type="submit"><span class="en">Download</span><span class="fr">Télécharger</span></button>
-  </form>
+  <div class="pack carte">
+    <p class="titre-pack"><b class="mot">DOA5 <span>Revolution</span></b></p>
+    <p class="en">The full package, tested together. Extract it next to <code>game.exe</code>, then run DOA5Installer.</p>
+    <p class="fr">Le pack complet, testé ensemble. À extraire à côté de <code>game.exe</code>, puis lancer DOA5Installer.</p>
+    <a class="gros" href="/DOA5Revolution.zip"><span class="en">Download</span><span class="fr">Télécharger</span> DOA5Revolution.zip</a>
+    <span class="version">2026.10</span>
+  </div>
+
+  <div class="dessous">
+    <form class="choix" id="choix">
+      <div class="carte boite">
+        <p class="titre-choix"><span class="en">Or pick the mods (latest versions)</span><span class="fr">Ou à la carte (dernières versions)</span></p>
+        <label data-zip="DOAReborn/DOA5Installer/DOA5Installer.zip" data-dispo><input type="checkbox">
+          <b>DOA5<span>Installer</span></b></label>
+        <label data-zip="DOAReborn/DOA5Tools/DOA5Tools.zip" data-dispo><input type="checkbox">
+          <b>DOA5<span>Tools</span></b></label>
+        <label data-zip="DOAReborn/DOA5Rollback/DOA5Rollback.zip" data-dispo><input type="checkbox">
+          <b>DOA5<span>Rollback</span></b></label>
+        <label data-zip="DOAReborn/DOA5Extra/DOA5Extra.zip" data-dispo><input type="checkbox">
+          <b>DOA5<span>Extra</span></b></label>
+        <button type="submit" disabled><span class="en">Download</span><span class="fr">Télécharger</span></button>
+      </div>
+    </form>
+    <a class="carte extracteur" href="https://github.com/FgcSnow/DOA5Extractor/releases/latest">
+      <span class="etat dispo">PS4</span>
+      <b>PS4 <span>Extractor</span></b>
+      <p class="en">PS4 stages and costumes, made from your own PS4 backup.</p>
+      <p class="fr">Stages et costumes PS4, faits depuis votre propre sauvegarde PS4.</p>
+      <i class="fleche">→</i>
+    </a>
+  </div>
 
   <h2>Dead or Alive 4</h2>
   <div class="cartes">

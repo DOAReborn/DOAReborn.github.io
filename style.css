@@ -85,30 +85,42 @@ a.carte:hover .fleche { opacity:1; transform:none; }
 .carte.grise:hover { opacity:.65; }
 .carte.seule { text-align:center; padding:1.6rem; }
 .carte.seule b { margin:0; font-size:1.2rem; letter-spacing:.15em; text-transform:uppercase; color:var(--gris); }
+
 .etat { display:inline-block; font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; padding:.15rem .65rem; border-radius:20px; }
 .etat.dispo { background:rgba(80,220,140,.15); color:#7ff0b0; }
 .etat.bientot { background:rgba(255,255,255,.1); color:var(--gris); }
 
-.choix { display:flex; justify-content:center; align-items:center; gap:2rem; }
-.choix .boite { display:flex; flex-direction:column; gap:.3rem; padding:1rem 1.1rem; }
-.choix .titre-pack { margin:0 0 .4rem; text-align:center; }
-.choix .titre-pack b { display:block; margin:0 0 .1rem; font-size:1.25rem; min-width:0; }
-.choix .titre-pack b span { color:transparent; }
-.choix .titre-pack em { font-style:normal; color:var(--gris); font-size:.95rem; }
+.pack { max-width:760px; margin:0 auto 1.6rem; text-align:center; padding:2rem 1.5rem 1.8rem;
+  border-color:rgba(255,111,159,.45); box-shadow:0 18px 60px rgba(224,69,123,.22); }
+.pack .titre-pack { margin:0 0 .6rem; }
+.pack .titre-pack b { margin:0; font-size:2rem; }
+.pack .titre-pack b span { color:transparent; }
+.pack p { margin:0 0 1.3rem; }
+.pack code { color:var(--texte); }
+.pack .gros { display:inline-block; color:#fff; text-decoration:none; font-weight:700; font-size:1.2rem; padding:1rem 2.6rem; border-radius:999px;
+  background:linear-gradient(135deg,var(--rose),var(--violet)); box-shadow:0 0 24px rgba(255,111,159,.45), 0 10px 30px rgba(224,69,123,.3);
+  transition:transform .2s, box-shadow .3s; }
+.pack .gros:hover { transform:translateY(-2px); box-shadow:0 0 34px rgba(255,111,159,.65), 0 14px 40px rgba(224,69,123,.4); }
+.pack .version { display:block; margin-top:.8rem; color:var(--gris); font-size:.85rem; letter-spacing:.1em; }
+.dessous { display:grid; grid-template-columns:auto minmax(0,320px); justify-content:center; align-items:stretch; gap:1.25rem; }
+@media (max-width:700px) { .dessous { grid-template-columns:1fr; } }
+.choix { display:flex; }
+.choix .boite { display:flex; flex-direction:column; gap:.3rem; padding:1rem 1.1rem; width:100%; }
+.choix .titre-choix { margin:0 0 .4rem; text-align:center; color:var(--gris); font-size:.95rem; }
+.extracteur b { font-size:1.4rem; }
 .choix label { display:flex; align-items:baseline; gap:.8rem; padding:.4rem .7rem; border-radius:10px; cursor:pointer; transition:background .2s; }
 .choix label:hover { background:rgba(255,255,255,.05); }
 .choix label.bientot { opacity:.4; cursor:default; }
 .choix label.bientot:hover { background:none; }
 .choix input { accent-color:var(--rose); width:1.05rem; height:1.05rem; transform:translateY(.12rem); }
 .choix b { margin:0; font-size:1.05rem; min-width:9.5rem; }
-.choix button { flex:none; border:1px solid var(--ligne); border-radius:999px; padding:.9rem 2.4rem; font:inherit; font-size:1.1rem; font-weight:700;
+.choix button { flex:none; align-self:center; margin-top:.6rem; border:1px solid var(--ligne); border-radius:999px; padding:.7rem 2rem; font:inherit; font-size:1.05rem; font-weight:700;
   color:var(--gris); background:rgba(255,255,255,.06); cursor:default; transition:color .3s, background .3s, box-shadow .3s, transform .2s, border-color .3s; }
 .choix button:not(:disabled) { color:#fff; cursor:pointer; border-color:transparent; background:linear-gradient(135deg,var(--rose),var(--violet));
   box-shadow:0 0 24px rgba(255,111,159,.45), 0 10px 30px rgba(224,69,123,.3); }
 .choix button:not(:disabled):hover { transform:translateY(-2px); box-shadow:0 0 34px rgba(255,111,159,.65), 0 14px 40px rgba(224,69,123,.4); }
 .choix button.flash { animation:flash .6s ease-out; }
 @keyframes flash { 0% { box-shadow:0 0 0 0 rgba(255,111,159,.8); } 100% { box-shadow:0 0 0 18px rgba(255,111,159,0), 0 0 24px rgba(255,111,159,.45); } }
-@media (max-width:600px) { .choix { flex-direction:column; gap:1.2rem; } }
 
 footer { text-align:center; color:var(--gris); font-size:.85rem; padding:2rem 1rem; border-top:1px solid var(--ligne); background:rgba(10,11,20,.7); }
 
