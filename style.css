@@ -76,6 +76,7 @@ main h2 + .cartes ~ h2 { margin-top:3.5rem; }
   background:radial-gradient(320px circle at var(--x,50%) var(--y,50%), rgba(255,111,159,.22), transparent 60%); }
 .carte b { display:block; overflow-wrap:anywhere; font-family:"Titre","Eurostile Extended","Michroma",sans-serif; font-size:1.6rem; letter-spacing:.04em; margin:.9rem 0 .3rem; }
 .carte b span { color:var(--rose); }
+.carte > b:first-child { margin-top:0; }
 .carte p { margin:0; color:var(--gris); }
 .carte .fleche { position:absolute; right:1.3rem; bottom:1.1rem; font-style:normal; font-size:1.4rem; color:var(--rose); opacity:0; transform:translateX(-10px); transition:.25s; }
 a.carte:hover { transform:translateY(-6px); border-color:rgba(255,111,159,.55); box-shadow:0 18px 50px rgba(224,69,123,.25); }
@@ -107,7 +108,13 @@ a.carte:hover .fleche { opacity:1; transform:none; }
 .choix { display:flex; }
 .choix .boite { display:flex; flex-direction:column; gap:.3rem; padding:1rem 1.1rem; width:100%; }
 .choix .titre-choix { margin:0 0 .4rem; text-align:center; color:var(--gris); font-size:.95rem; }
+.extracteur { display:flex; flex-direction:column; }
 .extracteur b { font-size:1.4rem; }
+.extracteur .bouton { align-self:center; margin-top:auto; color:#fff; text-decoration:none; font-weight:700; font-size:1.05rem; padding:.7rem 2rem;
+  border-radius:999px; background:linear-gradient(135deg,var(--rose),var(--violet)); box-shadow:0 0 24px rgba(255,111,159,.45), 0 10px 30px rgba(224,69,123,.3);
+  transition:transform .2s, box-shadow .3s; }
+.extracteur p { margin-bottom:1rem; }
+.extracteur .bouton:hover { transform:translateY(-2px); box-shadow:0 0 34px rgba(255,111,159,.65), 0 14px 40px rgba(224,69,123,.4); }
 .choix label { display:flex; align-items:baseline; gap:.8rem; padding:.4rem .7rem; border-radius:10px; cursor:pointer; transition:background .2s; }
 .choix label:hover { background:rgba(255,255,255,.05); }
 .choix label.bientot { opacity:.4; cursor:default; }
